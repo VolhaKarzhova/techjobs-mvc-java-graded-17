@@ -40,6 +40,8 @@ public class SearchController {
         model.addAttribute("title", "Jobs with " + searchType + ": " + searchTerm);
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", columnChoices);
+        model.addAttribute("columnSelection", searchType); //it preserves column selection
+        model.addAttribute("searchInput", searchTerm); //it preserves user search input
         return "search";
     }
 }
