@@ -38,6 +38,8 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
+    <th:block th:if="${#lists.isEmpty(jobs) and searchInput != null}">No jobs found. Please modify your search criteria
+        .</th:block>
     <div th:replace="~{list-jobs :: jobs-listing}"></div>
 </div>
 
